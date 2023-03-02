@@ -1,1 +1,1 @@
-# C-Studyng
+# C++Studyng
