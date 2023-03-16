@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <ctype.h>
+#include <algorithm>
 using namespace std;
 
 void verifica(string);
@@ -8,6 +10,7 @@ int main(void){
     string word;
     cout<<"Digite a palavra: ";
     getline(cin, word);
+    transform(word.begin(), word.end(), word.begin(), ::toupper);
     verifica(word);
 }
 
