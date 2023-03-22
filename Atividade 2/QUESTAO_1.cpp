@@ -1,9 +1,9 @@
 #include <iostream>
+#define MAXIMUN 50
 using namespace std;
 
 int empilhar(int [], int &, int);
 void showList(int[], int);
-int MAXIMUN = 50;
 
 int main(void){
     int topo = -1;
