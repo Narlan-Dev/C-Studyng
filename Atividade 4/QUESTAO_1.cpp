@@ -217,8 +217,8 @@ int desenfileirar(int fila[], int &num, int &ifila, int &element){
 }
 
 int empilhar(int someList[], int &top, int element){
-    if(top>=MAXIMUN + 1){
-        return 1;
+    if(top>=MAXIMUN - 1){
+        return 1;   
     }
     top++;
     someList[top] = element;

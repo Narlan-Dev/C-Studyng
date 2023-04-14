@@ -19,7 +19,7 @@ int main(void){
 
     do{
         design(0);
-        ifila = 0;
+        //ifila = 0;
         cin>>resposta;
     }while(menu(resposta, fila, ifila, ffila) != 3);
 
