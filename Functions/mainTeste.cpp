@@ -1,11 +1,11 @@
 #include "mergesort.h"
 #include <iostream>
-#define MAX 4
+#define MAX 5
 using namespace std;
 
 int main(void){
     //Algoritimo de teste
-    int vetor[MAX] = {9,7,6,8};
+    int vetor[MAX] = {9,7,6,8,1};
     
     //Antes de ordenar
     cout<<"\nVetor original: ";
