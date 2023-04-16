@@ -1,11 +1,6 @@
 #include "mergesort.h"
-#include <iostream>
-#include <cctype>
-#include <cstdlib>
-#include <cmath>
-#include <iterator>
 using namespace std;
-#define size(list) (sizeof(list) / sizeof(*(list))) // Macro que retorna tamanho do array
+#define size(list) (sizeof(list) / sizeof(*(list))) // Macro que retorna tamanho de qualquer array inicializado array
 
 void merge(int[], int, int, int);
 
