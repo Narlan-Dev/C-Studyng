@@ -4,4 +4,4 @@
 #include <cmath>
 #include <iterator>
 
-void mergeSort(int*, int, int);
+void quicksort(int*, int, int);
