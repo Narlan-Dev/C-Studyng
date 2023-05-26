@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>
 using namespace std;
 
 struct Aluno {
@@ -21,20 +22,25 @@ int main(void){
 	int matricula = 1;
     float media = 1;
     int qtd = 0;
+    int i = 0;
 	
-    cout << "\nDigite numeros de alunos: ";
-	cin>>qtd;
+    //Quantidade de alunos
+    do{
+        cout << "\nDigite numeros de alunos: ";
+	    cin>>qtd;
+    }while(qtd<=0);
 
     //Insere aluno com sua matricula e media
-	if(qtd > 0){
-        while((matricula  > 0)&&(matricula  != NULL)){
+    while(i<qtd){
+        if((matricula  > 0)){
             cout << "\nDigite matricula: ";
             cin>>matricula;
             cout << "\nDigite media: ";
             cin>>media;
-            if(matricula  > 0)inserir(alunos, matricula, media);
+            inserir(alunos, matricula, media);
+            i++;
         } 
-    }else{cout << "\nNumeros de alunos inválido: ";}
+    }
 
     //Imprime matrículas e médias na lista
     cout<<"\nMatriculas//Media -> alunos: ";
@@ -42,13 +48,15 @@ int main(void){
 
     //Desenfilera tudo imprimindo media maiores iguais ou maiores que 5
 	if(remover(alunos, matricula, media)!=0){
-		cout<<"Sem alunos";
+		cout<<"\nSem alunos";
 	}else{
-		cout<<"Medias: ";
+		cout<<"\nMedias maiores ou iguais a 5: ";
 		do{
 			if(media >= 5)cout<<"["<<media<<"]" ; //Define par
 		}while(remover(alunos, matricula, media)==0);	
 	}
+    cout<<endl;
+    system("pause");
 }
 
 int inserir(Fila &some, int matricula, float media){
@@ -83,7 +91,7 @@ void imprimir(Fila &some){
     Aluno * temp;
     temp = some.ini;
     while(temp != NULL) {
-        cout <<temp->matricula<<"//"<<temp->media<<"->";
+        cout <<"["<<temp->matricula<<"]"<<"//"<<"["<<temp->media<<"]"<<" -> ";
         temp = temp->prox;
     }
 }
