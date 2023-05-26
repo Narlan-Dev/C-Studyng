@@ -35,22 +35,24 @@ int main(void){
    if(remover(intPositivo, element)!=0){
 		cout<<"\nFila vazia";
 	}else{
-		cout<<"\nNumeros interios positivos: "<<element;
+		cout<<"\nNumeros interio positivo desenfileirado: "<<element;
 	}
 
     //Conta os a quatidade de numeros na fila
     cout<<"\nQuatidade de numeros na lista: ";
-    conta(intPositivo);
+    cout<<conta(intPositivo);
 
     //Desenfilera tudo imprimindo os pares
 	if(remover(intPositivo, element)!=0){
-		cout<<"Fila vazia";
+		cout<<"\nFila vazia";
 	}else{
-		cout<<"Numeros interios positivos pares: ";
+		cout<<"\nNumeros interios positivos pares: ";
 		do{
 			if(element % 2 == 0)cout<<element; //Define par
 		}while(remover(intPositivo, element)==0);	
 	}
+    cout<<endl;
+    system("pause");
 }
 
 int inserir(Fila &some, int element){
